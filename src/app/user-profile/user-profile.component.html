@@ -6,7 +6,7 @@
     <h2>Nom: {{ user1.name }}</h2>
     <h2>Prénom: {{ user1.firstName }}</h2>
     <h3 *ngIf="ageVisible">Age: {{ user1.age }} ans</h3>
-    <p class="quote-copy">{{ user1.quote }}</p>
+    <p class="quote-copy">{{ user1.quote ? user1.quote : 'Votre citation'}}</p>
     <p>
       <input type="text" class="quote" placeholder="Votre citation" [(ngModel)]="user1.quote">
     </p>
