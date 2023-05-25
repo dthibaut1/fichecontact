@@ -1,0 +1,18 @@
+<h1>{{ title}} 📄</h1>
+
+<div class="container">
+  <div class="fiche">
+    <img src="{{ user1.photo }}" alt="Photo de {{ user1.firstName }} {{ user1.name }}"/>
+    <h2>Nom: {{ user1.name }}</h2>
+    <h2>Prénom: {{ user1.firstName }}</h2>
+    <h3 *ngIf="ageVisible">Age: {{ user1.age }} ans</h3>
+    <p class="quote-copy">{{ user1.quote }}</p>
+    <p>
+      <input type="text" class="quote" placeholder="Votre citation" [(ngModel)]="user1.quote">
+    </p>
+    <div class="btn-box">
+      <button class="btn" type="button" (click)="toggleAge()">{{ageVisible ? 'Masquer' : 'Afficher'}} l'âge</button>
+    </div>
+
+  </div>
+</div>
